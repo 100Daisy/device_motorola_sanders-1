@@ -57,6 +57,12 @@ USING_DEVICE_GPS := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 TARGET_USES_HARDWARE_QCOM_GPS := false
 
+# Build
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
+TARGET_OTA_ALLOW_NON_AB := true
+
 # Kernel
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7
@@ -221,6 +227,13 @@ BOARD_ROOT_EXTRA_FOLDERS := dsp firmware fsg persist
 TARGET_PER_MGR_ENABLED := true
 
 # QC flags
+
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0020/input/input2/wake_gesture"
+TARGET_USES_INTERACTION_BOOST := true
+TARGET_WITH_POWERHAL := true
+
+# Qualcomm
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QC_TIME_SERVICES := true
 
