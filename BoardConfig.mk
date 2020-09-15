@@ -254,7 +254,8 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 VENDOR_SECURITY_PATCH := 2018-11-5
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-tmp
+include device/qcom/sepolicy-legacy-um/sepolicy.mk
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Thermal
 USE_DEVICE_SPECIFIC_THERMAL := true
