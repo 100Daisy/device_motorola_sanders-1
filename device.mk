@@ -22,7 +22,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 -include device/motorola/sanders/vendor_prop.mk
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/qcom-caf/msm8996
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
