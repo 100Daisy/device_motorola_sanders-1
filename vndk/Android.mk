@@ -2,6 +2,8 @@ ifeq ($(BOARD_VNDK_VERSION),)
 $(warning ************* BOARD VNDK is not enabled - compiling vndk-sp ***************************)
 LOCAL_PATH := $(call my-dir)
 
+include $(LOCAL_PATH)/vndk-sp-libs.mk
+
 vndk_sp_dir := vndk-sp-$(PLATFORM_VNDK_VERSION)
 
 define define-vndk-lib
