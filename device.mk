@@ -23,7 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    hardware/qcom-caf/msm8996
+    hardware/qcom-caf/msm8996/display \
+    hardware/qcom-caf/msm8996/media \
+    hardware/qcom-caf/msm8996/audio
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
